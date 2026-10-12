@@ -36,7 +36,7 @@ npm run check:meta   # checks the link-preview tags and og.jpg in dist/
 
 `npm run images` rebuilds the responsive WebP files in `public/img` from the original venue photos in `media/`, and `npm run og` rebuilds the 1200×630 link-preview image. Both use sharp.
 
-Stack: Vite, React, TypeScript, Framer Motion and HashRouter. The site is served by GitHub Pages from the `gh-pages` branch, and `.github/workflows/deploy.yml` rebuilds and republishes it on pushes to `main`. The build uses a relative base, so it works whatever the repository is called.
+Stack: Vite, React, TypeScript, Framer Motion and HashRouter. GitHub Pages deploys it with GitHub Actions: `.github/workflows/deploy.yml` builds and publishes on every push to the default branch, or when run by hand. The build uses a relative base, so it works whatever the repository is called.
 
 ## Photos
 
