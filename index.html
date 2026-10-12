@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB" data-phase="night">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>The Magic Garden · Battersea</title>
+    <meta name="description" content="A festival in a pub by Battersea Park. Live music most nights, a huge garden, open from 10:30am." />
+    <meta name="theme-color" content="#16100c" />
+    <link rel="canonical" href="https://alexwilder-dev.github.io/magic-garden-battersea/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Magic Garden" />
+    <meta property="og:title" content="The Magic Garden · Battersea" />
+    <meta property="og:description" content="A festival in a pub by Battersea Park. Live music most nights, a huge garden, open from 10:30am." />
+    <meta property="og:url" content="https://alexwilder-dev.github.io/magic-garden-battersea/" />
+    <meta property="og:image" content="https://alexwilder-dev.github.io/magic-garden-battersea/og.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Magic Garden's beer garden at dusk: picnic tables, lanterns and fairy lights under the canopy, with the pub's top-hat-and-vine logo" />
+    <meta property="og:locale" content="en_GB" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Magic Garden · Battersea" />
+    <meta name="twitter:description" content="A festival in a pub by Battersea Park. Live music most nights, a huge garden, open from 10:30am." />
+    <meta name="twitter:image" content="https://alexwilder-dev.github.io/magic-garden-battersea/og.jpg" />
+    <meta name="twitter:image:alt" content="The Magic Garden's beer garden at dusk, with the pub's logo" />
+
+    <link rel="icon" type="image/png" sizes="64x64" href="https://alexwilder-dev.github.io/magic-garden-battersea/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://alexwilder-dev.github.io/magic-garden-battersea/apple-touch-icon.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding:1rem;font-family:Georgia,serif">The Magic Garden, 231 Battersea Park Road, London SW11 4LG. Open Sun–Thu 10:30am–midnight, Fri–Sat 10:30am–2am. Call 020 7622 4844.</p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+    (() => {
+      try {
+        if (location.hash === '#me') localStorage.setItem('me', '1');
+        if (localStorage.getItem('me') || sessionStorage.getItem('pinged')) return;
+        sessionStorage.setItem('pinged', '1');
+      } catch (e) {}
+      const v = new URLSearchParams(location.search).get('v') || 'untagged';
+      fetch('https://ntfy.sh/YOUR-NTFY-TOPIC', {
+        method: 'POST', body: `${v} opened ${location.pathname}`, keepalive: true
+      }).catch(() => {});
+    })();
+    </script>
+  </body>
+</html>

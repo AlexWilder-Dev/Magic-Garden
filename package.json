@@ -1,0 +1,31 @@
+{
+  "name": "magic-garden-battersea",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "author": "AlexWilder-Dev",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "images": "node scripts/images.mjs",
+    "og": "node scripts/og.mjs",
+    "check:meta": "node scripts/check-meta.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/anybody": "^5.3.0",
+    "@fontsource-variable/literata": "^5.3.0",
+    "framer-motion": "^11.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "sharp": "^0.33.5",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}
